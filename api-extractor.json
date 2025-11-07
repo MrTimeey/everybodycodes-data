@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/api-extractor.schema.json",
+  "mainEntryPointFilePath": "./dist/index.d.ts",
+  "dtsRollup": {
+    "enabled": true,
+    "untrimmedFilePath": "./dist/everybodycodes-data.d.ts"
+  },
+  "apiReport": {
+    "enabled": true,
+    "reportFileName": "everybodycodes-data.api.md",
+    "reportFolder": "./etc/"
+  },
+  "docModel": { "enabled": false },
+  "tsdocMetadata": { "enabled": false },
+  "messages": { "extractorMessageReporting": { "default": { "logLevel": "warning" } } }
+}

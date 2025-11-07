@@ -1,0 +1,78 @@
+{
+  "name": "@mrtimeey/everybodycodes-data",
+  "version": "0.1.0",
+  "description": "Simple client for fetching data and submitting answers",
+  "type": "module",
+  "sideEffects": false,
+  "private": "false",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "docs": "typedoc",
+    "docs:clean": "rimraf docs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "dev:test": "vitest",
+    "prepublishOnly": "npm run build && npm run docs",
+    "api:extract": "npm run build && api-extractor run --local",
+    "build": "tsup",
+    "postbuild": "api-extractor run --local --no-update-report"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.54.0",
+    "@microsoft/tsdoc": "^0.15.1",
+    "@types/node": "^24.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "nock": "^14.0.10",
+    "node-fetch": "^2.7.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.0",
+    "typedoc": "^0.28.14",
+    "typedoc-plugin-markdown": "^4.9.0",
+    "typescript": "^5.9.3",
+    "undici": "^7.16.0",
+    "vitest": "^2.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrTimeey/everbodycodes-data.git"
+  },
+  "keywords": [
+    "everybody-codes"
+  ],
+  "author": "MrTimeey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrTimeey/everbodycodes-data/issues"
+  },
+  "homepage": "https://github.com/MrTimeey/everbodycodes-data#readme"
+}
