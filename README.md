@@ -55,6 +55,8 @@ console.log(part1);
 The public API surface is automatically tracked by [API Extractor](https://api-extractor.com/).  
 See [`etc/everybodycodes-data.api.md`](./etc/everybodycodes-data.api.md) for the latest exported types.
 
+The public API is also documented through [Typedoc on GH-Pages](https://mrtimeey.github.io/everybodycodes-data/). 
+
 ---
 
 ## 🧱 Development
