@@ -60,21 +60,25 @@ See [`etc/everybodycodes-data.api.md`](./etc/everybodycodes-data.api.md) for the
 ## 🧱 Development
 
 ### Prerequisites
+
 - Node.js ≥ 18.17
 - npm ≥ 9 or pnpm ≥ 8
 
 ### Setup
+
 ```bash
 npm ci
 ```
 
 ### Run all checks
+
 ```bash
 npm test
 npm run build
 ```
 
 ### Lint & Format
+
 ```bash
 npm run lint
 npm run format
@@ -86,8 +90,8 @@ npm run format
 
 This repository uses [release-please](https://github.com/google-github-actions/release-please-action):
 
-1. Conventional commits (`fix:`, `feat:`) update changelog and version bump via PR.  
-2. Merge the release PR → Git tag is created.  
+1. Conventional commits (`fix:`, `feat:`) update changelog and version bump via PR.
+2. Merge the release PR → Git tag is created.
 3. GitHub Actions publish the package to npm with provenance.
 
 ---

@@ -12,5 +12,7 @@
   },
   "docModel": { "enabled": false },
   "tsdocMetadata": { "enabled": false },
-  "messages": { "extractorMessageReporting": { "default": { "logLevel": "warning" } } }
+  "messages": {
+    "extractorMessageReporting": { "default": { "logLevel": "warning" } }
+  }
 }

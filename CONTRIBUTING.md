@@ -41,6 +41,7 @@ This project uses **[Conventional Commits](https://www.conventionalcommits.org/e
 to automate changelog generation and releases.
 
 Examples:
+
 ```
 feat: add AES decryption helper
 fix: incorrect key mapping for quest parts

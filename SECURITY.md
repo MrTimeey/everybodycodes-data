@@ -5,8 +5,8 @@
 Only the latest published npm version of `@mrtimeey/everybodycodes-data` receives fixes and updates.
 
 | Version | Supported |
-|----------|------------|
-| latest   | ✅ |
+| ------- | --------- |
+| latest  | ✅        |
 
 ---
 
@@ -19,6 +19,7 @@ Instead, contact:
 **coding@mrtimeey.com**
 
 Include as much detail as possible:
+
 - Description of the vulnerability
 - Steps to reproduce
 - A minimal proof-of-concept if applicable
