@@ -4,8 +4,13 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-docs:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,25 +18,23 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-
       - run: npm ci
       - run: npm run docs
 
+      # Debug-Ausgabe: zeigt, ob docs/ wirklich existiert
+      - run: ls -R docs || echo "no docs found"
+
+      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
   deploy:
-    needs: build-docs
+    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4

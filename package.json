@@ -33,7 +33,7 @@
     "docs:clean": "rimraf docs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings=0",
     "test": "vitest run",
     "dev:test": "vitest",
     "prepublishOnly": "npm run build && npm run docs",
@@ -42,13 +42,15 @@
     "postbuild": "api-extractor run --local --no-update-report"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@microsoft/api-extractor": "^7.54.0",
     "@microsoft/tsdoc": "^0.15.1",
     "@types/node": "^24.10.0",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",
-    "eslint": "^9.13.0",
+    "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
     "nock": "^14.0.10",
     "node-fetch": "^2.7.0",
     "prettier": "^3.6.2",
@@ -59,6 +61,7 @@
     "typedoc": "^0.28.14",
     "typedoc-plugin-markdown": "^4.9.0",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3",
     "undici": "^7.16.0",
     "vitest": "^2.1.9"
   },
