@@ -2,3 +2,13 @@ dist/
 coverage/
 node_modules/
 etc/
+
+# Logs / System
+*.log
+.DS_Store
+
+# Project-specific exclusions
+.github/
+.vscode/
+*.yml
+*.yaml
