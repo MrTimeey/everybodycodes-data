@@ -97,11 +97,11 @@ export class EverybodyCodesClient {
   ) {
     const url = this.makeUrl(type, event, "quest", quest);
 
-      type KeyResponse = {
-          key1?: string;
-          key2?: string;
-          key3?: string;
-      };
+    type KeyResponse = {
+      key1?: string;
+      key2?: string;
+      key3?: string;
+    };
 
     const data = await http<KeyResponse>(url, { headers: this.cookieHeader() });
 

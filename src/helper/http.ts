@@ -16,9 +16,9 @@ export async function http<T = unknown>(
       `HTTP ${res.status} ${res.statusText} :: ${url} :: ${body}`,
     );
   }
-    const ct = res.headers.get("content-type") || "";
-    if (ct.includes("application/json")) {
-        return (await res.json()) as T;
-    }
-    return (await res.text()) as unknown as T;
+  const ct = res.headers.get("content-type") || "";
+  if (ct.includes("application/json")) {
+    return (await res.json()) as T;
+  }
+  return (await res.text()) as unknown as T;
 }
