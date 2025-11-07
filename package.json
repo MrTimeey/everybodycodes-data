@@ -39,7 +39,7 @@
     "prepublishOnly": "npm run build && npm run docs",
     "api:extract": "npm run build && api-extractor run --local",
     "build": "tsup",
-    "postbuild": "api-extractor run --local --no-update-report"
+    "postbuild": "api-extractor run --local"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

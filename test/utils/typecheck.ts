@@ -20,8 +20,9 @@ export function checkTypes(source: string, fileName: string) {
   fs.writeFileSync(tmpFile, sanitized, "utf8");
 
   const program = ts.createProgram([tmpFile], {
-    module: ts.ModuleKind.NodeNext,
-    moduleResolution: ts.ModuleResolutionKind.NodeNext,
+    module: ts.ModuleKind.ESNext,
+    moduleResolution: ts.ModuleResolutionKind.Bundler,
+    moduleDetection: ts.ModuleDetectionKind.Force,
     target: ts.ScriptTarget.ES2022,
     strict: true,
     noEmit: true,
