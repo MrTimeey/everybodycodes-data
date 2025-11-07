@@ -96,7 +96,14 @@ export class EverybodyCodesClient {
     quest: string | number,
   ) {
     const url = this.makeUrl(type, event, "quest", quest);
-    const data = await http<any>(url, { headers: this.cookieHeader() });
+
+      type KeyResponse = {
+          key1?: string;
+          key2?: string;
+          key3?: string;
+      };
+
+    const data = await http<KeyResponse>(url, { headers: this.cookieHeader() });
 
     const out: Partial<Record<"1" | "2" | "3", string>> = {};
     for (const p of ["1", "2", "3"] as const) {
