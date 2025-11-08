@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.0.1...v1.1.0) (2025-11-08)
+
+
+### Features
+
+* Automatic release process ([0025b4c](https://github.com/MrTimeey/everybodycodes-data/commit/0025b4c296fa7993d97af7fb24b8cf27ee485cf7))
+
 ## [1.0.1](https://github.com/MrTimeey/everybodycodes-data/compare/v1.0.0...v1.0.1) (2025-11-08)
 
 
