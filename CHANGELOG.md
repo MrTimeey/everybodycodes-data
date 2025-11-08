@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.3.0...v1.4.0) (2025-11-08)
+
+
+### Features
+
+* change AES mechanism to crypto-js ([a9ba144](https://github.com/MrTimeey/everybodycodes-data/commit/a9ba144c3754f65f8af0aacd64f45203be3028d1)), closes [#11](https://github.com/MrTimeey/everybodycodes-data/issues/11)
+
 ## [1.3.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.2.0...v1.3.0) (2025-11-08)
 
 
