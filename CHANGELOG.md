@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/MrTimeey/everybodycodes-data/compare/v1.0.0...v1.0.1) (2025-11-08)
+
+
+### Bug Fixes
+
+* prettier ([729f169](https://github.com/MrTimeey/everybodycodes-data/commit/729f169b63613d65c001e3b73633d9d6153ed7f8))
+
 ## 1.0.0 (2025-11-08)
 
 
