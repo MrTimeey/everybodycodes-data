@@ -1,5 +1,5 @@
 import { http } from "./helper/http";
-import { aesDecryptHexWithKey } from "./crypto.js";
+import { decryptText } from "./crypto.js";
 
 const API_BASE = "https://everybody.codes/api";
 const CDN_BASE = "https://everybody-codes.b-cdn.net/assets";
@@ -100,8 +100,7 @@ export class EverybodyCodesClient {
     (["1", "2", "3"] as const).forEach((p) => {
       const hex = encrypted[p];
       const key = keys[p];
-      if (hex && key)
-        out[Number(p) as 1 | 2 | 3] = aesDecryptHexWithKey(key, hex);
+      if (hex && key) out[Number(p) as 1 | 2 | 3] = decryptText(key, hex);
     });
     return out;
   }
