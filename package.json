@@ -1,6 +1,6 @@
 {
   "name": "@mrtimeey/everybodycodes-data",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Simple client for fetching data and submitting answers",
   "type": "module",
   "sideEffects": false,

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/MrTimeey/everybodycodes-data/compare/v1.4.0...v1.4.1) (2025-11-08)
+
+
+### Bug Fixes
+
+* deps ([c6511d2](https://github.com/MrTimeey/everybodycodes-data/commit/c6511d2abb4975db18a8f6c8b084d8da02547510))
+
 ## [1.4.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.3.0...v1.4.0) (2025-11-08)
 
 
