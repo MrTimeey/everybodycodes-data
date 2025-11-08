@@ -1,9 +1,10 @@
 # @mrtimeey/everybodycodes-data
 
 [![npm version](https://img.shields.io/npm/v/@mrtimeey/everybodycodes-data?color=brightgreen&label=npm)](https://www.npmjs.com/package/@mrtimeey/everybodycodes-data)
-[![npm provenance](https://provenancebadge.vercel.app/npm/@mrtimeey/everybodycodes-data)](https://provenancebadge.vercel.app)
+[![Provenance: verified](https://img.shields.io/badge/Provenance-verified-brightgreen.svg)](https://www.npmjs.com/package/@mrtimeey/everybodycodes-data)
 [![build](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/ci.yml/badge.svg)](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/ci.yml)
-[![release](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/release.yml/badge.svg)](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/release.yml)
+[![docs](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/docs.yml/badge.svg)](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/docs.yml)
+[![publish](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/publish.yml/badge.svg)](https://github.com/mrtimeey/everybodycodes-data/actions/workflows/publish.yml)
 [![license](https://img.shields.io/github/license/mrtimeey/everybodycodes-data?color=blue)](LICENSE)
 
 > 🧩 A lightweight Node.js client for fetching and decrypting **Everybody Codes** inputs automatically.
