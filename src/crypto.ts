@@ -1,13 +1,20 @@
-import CryptoJS from "crypto-js";
+import crypto from "node:crypto";
 
-export const decryptText = (key: string, text: string) => {
-  const cipherParams = CryptoJS.lib.CipherParams.create({
-    ciphertext: CryptoJS.enc.Hex.parse(text),
-  });
+export function aesDecryptHexWithKey(key: string, hexCipher: string): string {
+  const keyBytes = Buffer.from(key, "utf8");
+  const iv = Buffer.from(key.substring(0, 16), "utf8");
+  const cipherBytes = Buffer.from(hexCipher, "hex");
 
-  const keyWA = CryptoJS.enc.Utf8.parse(key);
-  const ivWA = CryptoJS.enc.Utf8.parse(key.substring(0, 16));
+  const algo =
+    keyBytes.length === 16
+      ? "aes-128-cbc"
+      : keyBytes.length === 24
+        ? "aes-192-cbc"
+        : keyBytes.length === 32
+          ? "aes-256-cbc"
+          : "aes-256-cbc";
 
-  const decrypted = CryptoJS.AES.decrypt(cipherParams, keyWA, { iv: ivWA });
-  return decrypted.toString(CryptoJS.enc.Utf8);
-};
+  const dec = crypto.createDecipheriv(algo, keyBytes, iv);
+  const out = Buffer.concat([dec.update(cipherBytes), dec.final()]);
+  return out.toString("utf8");
+}
