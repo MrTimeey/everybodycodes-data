@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.1.0...v1.2.0) (2025-11-08)
+
+
+### Features
+
+* issue template ([63d1f0e](https://github.com/MrTimeey/everybodycodes-data/commit/63d1f0e218cfd8b344078b35b4350e6fd57a3854))
+
+
+### Bug Fixes
+
+* release pipeline ([3bd548d](https://github.com/MrTimeey/everybodycodes-data/commit/3bd548d8163cfe3a4f9cea4e743c60c39dab2c29))
+
 ## [1.1.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.0.1...v1.1.0) (2025-11-08)
 
 
