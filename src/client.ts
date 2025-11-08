@@ -49,13 +49,29 @@ export class EverybodyCodesClient {
 
   private async getSeed(): Promise<string> {
     if (this.seed) return this.seed;
+
     const url = `${API_BASE}/user/me`;
-    const data = await http<{ seed?: string }>(url, {
+    const data = await http<{ seed?: number | string }>(url, {
       headers: this.cookieHeader(),
     });
-    if (!data?.seed) throw new Error("Kein 'seed' in /user/me Antwort.");
-    this.seed = data.seed;
-    return data.seed;
+
+    const raw = data?.seed;
+    const num =
+      typeof raw === "number"
+        ? raw
+        : typeof raw === "string" && raw.trim() !== ""
+          ? Number(raw)
+          : NaN;
+
+    if (!Number.isFinite(num) || num <= 0) {
+      throw new Error(
+        "Invalid seed value (0). This usually means your session has expired or the 'everybody-codes' cookie is invalid. " +
+          "Log in again at https://everybody.codes, copy the cookie value exactly (no spaces or quotes), and try again.",
+      );
+    }
+
+    this.seed = String(num);
+    return this.seed;
   }
 
   private async getEncryptedInputs(
