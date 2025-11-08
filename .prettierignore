@@ -12,3 +12,5 @@ etc/
 .vscode/
 *.yml
 *.yaml
+*.md
+*.json
