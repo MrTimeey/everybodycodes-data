@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.2.0...v1.3.0) (2025-11-08)
+
+
+### Features
+
+* readme badges ([a5c041b](https://github.com/MrTimeey/everybodycodes-data/commit/a5c041bab195b82c12bef1e9fc433d32ab82645f))
+
 ## [1.2.0](https://github.com/MrTimeey/everybodycodes-data/compare/v1.1.0...v1.2.0) (2025-11-08)
 
 
