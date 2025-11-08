@@ -1,0 +1,56 @@
+name: "🐞 Bug Report"
+description: "Report a reproducible issue or unexpected behavior in the client."
+labels: ["bug"]
+title: "Bug: "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a concise summary of the issue.
+      placeholder: "The client crashes when submitting an empty answer..."
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Write each step clearly and sequentially.
+      placeholder: |
+        1. Call `client.submitAnswer()` with an empty payload
+        2. Observe that an exception is thrown
+        3. Expected: graceful validation error
+
+  - type: input
+    id: expected
+    attributes:
+      label: Expected Behavior
+      placeholder: "The client should reject invalid input with a clear error message."
+
+  - type: input
+    id: actual
+    attributes:
+      label: Actual Behavior
+      placeholder: "An uncaught exception is thrown."
+
+  - type: input
+    id: version
+    attributes:
+      label: Affected Version
+      placeholder: "e.g. 1.4.2"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Stacktrace
+      description: Paste any relevant console output or stack traces.
+      render: shell
+      placeholder: |
+        Error: Unexpected token in payload
+            at Client.submitAnswer (src/client.ts:42)
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any related issues, temporary fixes, or environment details.
+      placeholder: "Seems related to recent changes in API payload validation..."
